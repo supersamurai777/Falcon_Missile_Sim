@@ -54,19 +54,20 @@ command="service dbus start; service ssh start; service xrdp start"
 The following steps delineate typical falcon utilization from a bash shell terminal.
 
 1. Build falcon executable
-From within the ./falcon directory, invoke ./Make_falcon to build "./bin/falcon.exe".
 
-  This step only needs to be performed when the falcon repository is first installed, and after any code changes have been made to falcon source files.
+From within the ./falcon directory, invoke ./Make_falcon to build "./bin/falcon.exe".
+This step only needs to be performed when the falcon repository is first installed, and after any code changes have been made to falcon source files.
 
 2. Render animation and capture image sequence
-  From within the ./falcon directory, invoke ./Exec_falcon with a specified TXYZ.OUT case number (i.e., 0000, 0001, 0002 or 0003).
 
-  A blank falcon display window should appear on the desktop and keypress options to control the animation printed in the terminal window. Animation starts by clicking a mouse button when the mouse cursor is placed within the falcon display window. Keypresses are only   effective if the mouse cursor is within the display window. Pressing the "Esc" key or closing the falcon display window will terminate the program.
+From within the ./falcon directory, invoke ./Exec_falcon with a specified TXYZ.OUT case number (i.e., 0000, 0001, 0002 or 0003).
+A blank falcon display window should appear on the desktop and keypress options to control the animation printed in the terminal window. Animation starts by clicking a mouse button when the mouse cursor is placed within the falcon display window. Keypresses are only   effective if the mouse cursor is within the display window. Pressing the "Esc" key or closing the falcon display window will terminate the program.
 
 3. Create animated GIF or MP4 video
-  Upon termination of the falcon program, change to the ./Ximg subdirectory and invoke ../util/xpm2gif to create animated GIF file named "img_anim.gif", or invoke ../util/xpm2mp4 to create MP4 video file named "img_anim.mp4".
 
-  Note, to prevent captured and converted images from a previous falcon execution being incorporated into a subsequent animated GIF or MP4 video file, it's recommended all img_####.[xpm|gif|jpg] files be deleted from the ./Ximg subdirectory before beginning another       falcon execution. Also, rename or move the newly created animated GIF or MP4 video file to prevent it being overwritten.
+Upon termination of the falcon program, change to the ./Ximg subdirectory and invoke ../util/xpm2gif to create animated GIF file named "img_anim.gif", or invoke ../util/xpm2mp4 to create MP4 video file named "img_anim.mp4".
+
+Note, to prevent captured and converted images from a previous falcon execution being incorporated into a subsequent animated GIF or MP4 video file, it's recommended all img_####.[xpm|gif|jpg] files be deleted from the ./Ximg subdirectory before beginning another falcon execution. Also, rename or move the newly created animated GIF or MP4 video file to prevent it being overwritten.
 
 
 
